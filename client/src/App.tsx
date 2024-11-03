@@ -10,6 +10,7 @@ import Warehouse from "./Pages/Master/Warehouse";
 import Inventory from "./Pages/inventory";
 import PurchaseOrder from "./Pages/purchaseOrders";
 import SalesOrder from "./Pages/salesOrder";
+import StockLevels from "./Pages/StockLevels";
 
 import AuthLayout from "./Layouts/AuthLayout";
 
@@ -88,8 +89,27 @@ function App() {
           ]
         },
         {
-          path: "inventory",
-          element: <Inventory />,
+          path: "inventory-management",
+          children: [
+            {
+              path: "inventory",
+              children: [
+                {
+                  index: true,
+                  element: <Inventory />
+                }
+              ]
+            },
+            {
+              path: "stock-levels",
+              children: [
+                {
+                  index: true,
+                  element: <StockLevels />
+                }
+              ]
+            },
+          ]
         },
         {
           path: "purchase-order",

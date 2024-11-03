@@ -51,7 +51,11 @@ function getItem(
       getItem('Customer', 'master/customer', <ContactsOutlined />), // Customer management
     ]),
     
-    getItem('Inventory', 'inventory', <DatabaseOutlined />), // Inventory tracking
+    getItem('Inventory Management', 'sub2', <DatabaseOutlined />,[
+      getItem('Inventory', 'inventory', <DatabaseOutlined />), // Inventory tracking
+      getItem('Stock Levels', 'stock-levels', <DatabaseOutlined />), // Inventory tracking
+    ]),
+   // Inventory tracking
   
     getItem('Purchase Orders', 'purchase-order', <ShoppingCartOutlined />), // Purchase order management
   
@@ -74,8 +78,10 @@ const Sidebar: React.FC = () => {
       getItem('Customer', 'master/customer', <ContactsOutlined />), // Customer management
     ]),
     
-    getItem('Inventory', 'inventory', <DatabaseOutlined />), // Inventory tracking
-  
+    getItem('Inventory Management', 'sub2', <DatabaseOutlined />,[
+      getItem('Inventory', 'inventory-management/inventory', <DatabaseOutlined />), // Inventory tracking
+      getItem('Stock Levels', 'inventory-management/stock-levels', <DatabaseOutlined />), // Inventory tracking
+    ]),
     getItem('Purchase Orders', 'purchase-order', <ShoppingCartOutlined />), // Purchase order management
   
     getItem('Sales Orders', 'sales-order', <ShoppingOutlined />), // Sales order management
